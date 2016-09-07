@@ -10,7 +10,7 @@ Release:        1%{?dist}
 Summary:        Tenacity is a general purpose retrying library
 License:        ASL 2.0
 URL:            https://github.com/jd/tenacity
-Source0:        https://pypi.io/packages/source/t/%{pypi_name}-%{version}.tar.gz
+Source0:        https://pypi.io/packages/source/t/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 %package -n python2-%{pypi_name}
@@ -38,7 +38,6 @@ BuildRequires:    python3-setuptools
 BuildRequires:    python3-devel
 
 Requires:         python3-six >= 1.7.0
-Requires:         python3-futures >= 3.0
 Requires:         python3-monotonic >= 0.6
 
 
@@ -83,5 +82,5 @@ LANG=en_US.UTF-8 %py3_install
 
 
 %changelog
-* Thu Aug 25 2016 Pradeep Kilambi <pkilambi@redhat.com> - 2.0.0-1
+* Wed Sep 07 2016 Pradeep Kilambi <pkilambi@redhat.com> - 3.0.0-1
 - initial package release
