@@ -5,7 +5,7 @@
 %endif
 
 Name:           python-tenacity
-Version:        3.0.0
+Version:        3.2.1
 Release:        1%{?dist}
 Summary:        Tenacity is a general purpose retrying library
 License:        ASL 2.0
@@ -31,7 +31,7 @@ Requires:         python-monotonic >= 0.6
 %if 0%{?with_python3}
 %package -n python3-%{pypi_name}
 
-Summary:         Tenacity is a general purpose retrying library
+Summary:          Tenacity is a general purpose retrying library
 %{?python_provide:%python_provide python3-tenacity}
 
 BuildRequires:    python3-setuptools
@@ -44,12 +44,14 @@ Requires:         python3-monotonic >= 0.6
 %description -n python3-%{pypi_name}
 Tenacity is a general-purpose retrying library, written in Python, to simplify
 the task of adding retry behavior to just about anything. It originates from a
-fork of Retrying 
+fork of Retrying. 
 
 %endif
 
 %description
-Tenacity is an Apache 2.0 licensed general-purpose retrying library, written in
+Tenacity is a general-purpose retrying library, written in Python, to simplify
+the task of adding retry behavior to just about anything. It originates from a
+fork of Retrying.
 
 %prep
 %setup -q -n %{pypi_name}-%{version}
@@ -82,5 +84,8 @@ LANG=en_US.UTF-8 %py3_install
 
 
 %changelog
+* Thu Oct 06 2016 Pradeep Kilambi <pkilambi@redhat.com> - 3.2.1-1
+- rebase to 3.2.1
+
 * Wed Sep 07 2016 Pradeep Kilambi <pkilambi@redhat.com> - 3.0.0-1
 - initial package release
